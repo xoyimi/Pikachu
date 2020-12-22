@@ -1,0 +1,57 @@
+:root, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 12px;
+}
+
+pre {
+    margin: 0;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    transition: all 1.5s;
+}
+
+body {
+    display: flex;
+}
+
+@media screen and (max-width: 1080px) {
+    body {
+        flex-direction: column;
+    }
+}
+
+
+.code {
+    flex: auto;
+    overflow: hidden;
+}
+
+.pikachu-wrapper {
+    flex: none;
+    flex-basis: 50%;
+    background-color: pink;
+}
+
+/************************************************************************************************/
+/*写在pre标签中的内容*/
+/*写代码也要好看的背景色！*/
+.code {
+    background-image: linear-gradient(25deg, #dcb9bb, #dfcac7, #e1dbd4, #e2ece0);
+    /*字体再大一些*/
+    font-size: 14px;
+    /*似乎有点挤*/
+    padding: 10px;
+}
+
+/*我需要一些更好看的字体*/
+.code {
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+/*嗯，好看，差不多可以开始画画咯~*/
