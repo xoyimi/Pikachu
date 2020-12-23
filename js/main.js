@@ -6,7 +6,7 @@ window.addEventListener('resize', debounce(() => {
   elem.scrollTo(0, elem.offsetHeight)
 }, 100))
 
-const code =`/*欢迎来到代码的世界~
+const code = `/*欢迎来到代码的世界~
 *我是小明同学，
 *初次见面，
 *送一只卡哇伊的皮卡丘送给你们~
@@ -355,19 +355,20 @@ writeCode(document.querySelector('.code'), code, 10)
 //音乐控制
 let bgmBtn = document.querySelector('#bgmButton')
 
-setTimeout(()=>{
+setTimeout(() => {
   document.querySelector('.audio').addEventListener('playing', () => {
     bgmBtn.style.animationPlayState = 'running'
   })
-})
+},100)
 bgmBtn.addEventListener('click', function () {
   let bgm = document.querySelector('audio')
   if (bgm.paused) {
-    bgm.play()
-    this.style.animationPlayState = 'running'
+    bgm.play().then(() => {
+      this.style.animationPlayState = 'running'
+    })
   } else {
     bgm.pause()
-    this.style.animationPlayState = 'paused'
+      this.style.animationPlayState = 'paused'
   }
 })
 
