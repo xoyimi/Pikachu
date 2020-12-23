@@ -44,7 +44,7 @@ const code = `/*欢迎来到代码的世界~
 .code .function {
   color: #dd4a68;
 }
-.code .sting {
+.code .string {
   color: #690;
 }
   /*嗯，好看~可以开始画画咯~*/
