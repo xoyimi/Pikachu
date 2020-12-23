@@ -74,6 +74,14 @@ button:focus{
 
 }
 
+/*署名*/
+.name{
+  visibility: hidden;
+  position: absolute;
+  bottom: 20px;
+}
+
+
 /*修改默认高亮*/
 .comment{
   color: black;
@@ -97,7 +105,7 @@ button:focus{
 
 *, ::after, ::before {
   box-sizing: border-box;
-  transition-property: font-size, padding;
+  transition-property: font-size, padding,visibility;
   transition-duration: 1.5s;
 }
 
