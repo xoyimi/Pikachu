@@ -25,24 +25,27 @@ const code = `/*欢迎来到代码的世界~
   font-family: "Helvetica", "Arial", sans-serif;
 }
 /*加入代码高亮吧*/
-.comment： {
+.code .comment： {
   color: #708090;
 }
 
-.selector {
+.code .selector {
   color: #690;
 }
 
-.punctuation {
+.code .punctuation {
   color: #999;
 }
 
-.property {
+.code .property {
   color: #905;
 }
 
-.function {
+.code .function {
   color: #dd4a68;
+}
+.code .sting {
+  color: #690;
 }
   /*嗯，好看~可以开始画画咯~*/
 

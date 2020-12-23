@@ -86,26 +86,28 @@ button:focus{
 
 
 /*修改默认高亮*/
-.comment{
+.code .comment{
   color: black;
 }
 
-.selector {
+.code .selector {
   color: black;
 }
 
-.punctuation {
+.code .punctuation {
   color: black;
 }
 
-.property {
+.code .property {
   color: black;
 }
 
-.function {
+.code .function {
   color: black;
 }
-
+.code .sting{
+  color: black;
+}
 *, ::after, ::before {
   box-sizing: border-box;
   transition-property: font-size, padding,visibility;
