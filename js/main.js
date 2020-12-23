@@ -360,18 +360,13 @@ writeCode(document.querySelector('.code'), code, 10)
 
 //音乐控制
 let bgmBtn = document.querySelector('#bgmButton')
-
-setTimeout(() => {
-  document.querySelector('.audio').addEventListener('playing', () => {
-    bgmBtn.style.animationPlayState = 'running'
-  })
-}, 100)
+document.querySelector('.audio').addEventListener('playing', () => {
+  bgmBtn.style.animationPlayState = 'running'
+})
 bgmBtn.addEventListener('click', function () {
   let bgm = document.querySelector('audio')
   if (bgm.paused) {
-    bgm.play().then(() => {
-      this.style.animationPlayState = 'running'
-    })
+    bgm.play()
   } else {
     bgm.pause()
     this.style.animationPlayState = 'paused'
