@@ -16,7 +16,9 @@ export function writeCode(element, code, speed = 50) {
 
     //代码速度控制 使用时间代理
     document.querySelector('.btn-wrapper').addEventListener('click', (e) => {
-      if (e.target['nodeName'] === 'BUTTON') {
+      if (e.target['nodeName'] === 'BUTTON'){
+       for (let i of e.target['parentNode'].children) i['classList'].remove('active')
+        e.target['classList'].add('active')
         speed = Number(e.target['dataset']['speed'])
       }
     })

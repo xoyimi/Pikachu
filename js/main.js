@@ -349,7 +349,9 @@ const code = `/*欢迎来到代码的世界~
   animation: pokeballRotate 4s ease infinite;
 }`
 
-writeCode(document.querySelector('.code'), code, 10)
+writeCode(document.querySelector('.code'), code, 10).then(()=>{
+  document.querySelector('.name').style.visibility='visible'
+})
 
 
 //音乐控制

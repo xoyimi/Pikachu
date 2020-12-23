@@ -52,6 +52,7 @@ button:nth-child(n){
   margin-top:10px ;
 }
 button{
+  cursor: pointer;
   border: none;
   border-radius: 4px;
   height: 30px;
@@ -60,7 +61,6 @@ button{
 }
 button:focus{
   outline: none;
-  box-shadow: 0 0 3px 3px #ffffff;
 }
 .slower-btn{
   background-color: #007bff;
@@ -72,6 +72,9 @@ button:focus{
 .faster-btn{
   background-color:#ffc107;
 
+}
+.active{
+  box-shadow: 0 0 3px 3px #ffffff;
 }
 
 /*署名*/
