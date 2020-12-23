@@ -6,7 +6,7 @@ window.addEventListener('resize', debounce(() => {
   elem.scrollTo(0, elem.offsetHeight)
 }, 100))
 
-const code = `/*欢迎来到代码的世界~
+const code =`/*欢迎来到代码的世界~
 *我是小明同学，
 *初次见面，
 *送一只卡哇伊的皮卡丘送给你们~
@@ -25,17 +25,31 @@ const code = `/*欢迎来到代码的世界~
   font-family: "Helvetica", "Arial", sans-serif;
 }
 /*加入代码高亮吧*/
-.
+.comment： {
+  color: #708090;
+}
 
+.selector {
+  color: #690;
+}
 
+.punctuation {
+  color: #999;
+}
 
+.property {
+  color: #905;
+}
 
+.function {
+  color: #dd4a68;
+}
+  /*嗯，好看~可以开始画画咯~*/
 
-/*嗯，好看，差不多可以开始画画咯~*/
-/*先画皮卡丘的头部轮廓*/
+  /*先画皮卡丘的头部轮廓*/
 .pikachu-head {
   position: relative;
-  z-index: 5;
+  z-index: 1;
   animation: idle 1.5s infinite;
 }
 
@@ -333,10 +347,9 @@ const code = `/*欢迎来到代码的世界~
 }
 .pikachu-pokeball {
   animation: pokeballRotate 4s ease infinite;
-}
-`
+}`
 
-// writeCode(document.querySelector('.code'), code, 6)
+writeCode(document.querySelector('.code'), code, 10)
 
 
 //音乐控制
@@ -355,3 +368,4 @@ bgmBtn.addEventListener('click', function () {
     this.style.animationPlayState = 'paused'
   }
 })
+
