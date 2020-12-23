@@ -349,9 +349,10 @@ const code = `/*欢迎来到代码的世界~
   animation: pokeballRotate 4s ease infinite;
 }`
 
-writeCode(document.querySelector('.code'), code, 10).then(()=>{
-  document.querySelector('.name').style.visibility='visible'
-})
+writeCode(document.querySelector('.code'), code, 10)
+    .then(() => {
+      document.querySelector('.name').style.visibility = 'visible'
+    })
 
 
 //音乐控制
@@ -361,7 +362,7 @@ setTimeout(() => {
   document.querySelector('.audio').addEventListener('playing', () => {
     bgmBtn.style.animationPlayState = 'running'
   })
-},100)
+}, 100)
 bgmBtn.addEventListener('click', function () {
   let bgm = document.querySelector('audio')
   if (bgm.paused) {
@@ -370,7 +371,7 @@ bgmBtn.addEventListener('click', function () {
     })
   } else {
     bgm.pause()
-      this.style.animationPlayState = 'paused'
+    this.style.animationPlayState = 'paused'
   }
 })
 
