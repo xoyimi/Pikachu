@@ -6,8 +6,13 @@ window.addEventListener('resize', debounce(() => {
   elem.scrollTo(0, elem.offsetHeight)
 }, 100))
 
-const code = `/*写在pre标签中的内容*/
-/*写代码也要好看的背景色！*/
+const code = `/*欢迎来到代码的世界~
+*我是小明同学，
+*初次见面，
+*送一只卡哇伊的皮卡丘送给你们~
+*/
+
+/*先给背景调个舒服的渐变色*/
 .code {
   background-image: linear-gradient(25deg, #dcb9bb, #dfcac7, #e1dbd4, #e2ece0);
   /*字体再大一些*/
@@ -19,6 +24,13 @@ const code = `/*写在pre标签中的内容*/
 .code {
   font-family: "Helvetica", "Arial", sans-serif;
 }
+/*加入代码高亮吧*/
+.
+
+
+
+
+
 /*嗯，好看，差不多可以开始画画咯~*/
 /*先画皮卡丘的头部轮廓*/
 .pikachu-head {
@@ -252,10 +264,7 @@ const code = `/*写在pre标签中的内容*/
   border-radius: 0 0 50% 50%;
 }
 
-/*动起来*/
-.pikachu-body-upper {
-  animation: idle 1.5s .2s infinite;
-}
+/*尾巴摇动起来*/
 
 .pikachu-tail {
   animation: shakeTail 2s infinite;
@@ -306,7 +315,7 @@ const code = `/*写在pre标签中的内容*/
   border-radius: 50%;
   left: 50%;
   top: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  transform: translate(-50%,-50%) ;
   z-index: 1;
 }
 
@@ -327,4 +336,22 @@ const code = `/*写在pre标签中的内容*/
 }
 `
 
-writeCode(document.querySelector('.code'), code, 6)
+// writeCode(document.querySelector('.code'), code, 6)
+
+
+//音乐控制
+let bgmBtn = document.querySelector('#bgmButton')
+
+document.querySelector('.audio').addEventListener('playing', () => {
+  bgmBtn.style.animationPlayState = 'running'
+})
+bgmBtn.addEventListener('click', function () {
+  let bgm = document.querySelector('audio')
+  if (bgm.paused) {
+    bgm.play()
+    this.style.animationPlayState = 'running'
+  } else {
+    bgm.pause()
+    this.style.animationPlayState = 'paused'
+  }
+})
