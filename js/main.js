@@ -355,8 +355,10 @@ writeCode(document.querySelector('.code'), code, 10)
 //音乐控制
 let bgmBtn = document.querySelector('#bgmButton')
 
-document.querySelector('.audio').addEventListener('playing', () => {
-  bgmBtn.style.animationPlayState = 'running'
+setTimeout(()=>{
+  document.querySelector('.audio').addEventListener('playing', () => {
+    bgmBtn.style.animationPlayState = 'running'
+  })
 })
 bgmBtn.addEventListener('click', function () {
   let bgm = document.querySelector('audio')
