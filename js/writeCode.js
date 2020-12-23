@@ -12,9 +12,7 @@ export function writeCode(element, code, speed = 50) {
   ;(function helper() {
     setTimeout(() => {
       if (n < code.length) {
-        if (code[n] === '\n') {
-          element.scrollTo(0, element.offsetHeight)
-        }
+          element.scrollTo(0, element.scrollHeight)
         element.innerHTML = Prism.highlight(code.slice(0, n), Prism.languages.css, 'css')
         styleTag.innerHTML += code[n]
         n++

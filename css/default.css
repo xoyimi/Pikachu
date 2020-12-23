@@ -1,57 +1,165 @@
 :root, body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    font-size: 12px;
+  margin: 0;
+  font-size: 12px;
+  display: flex;
+
 }
 
 pre {
-    margin: 0;
+  margin: 0;
+  overflow-y: scroll;
 }
 
 *, ::after, ::before {
-    box-sizing: border-box;
-    transition: all 1.5s;
-}
-
-body {
-    display: flex;
+  box-sizing: border-box;
+  transition-property: font-size, padding;
+  transition-duration: 1.5s;
 }
 
 @media screen and (max-width: 1080px) {
-    body {
-        flex-direction: column;
-    }
+  body {
+    flex-direction: column;
+  }
 }
 
-
 .code {
-    flex: auto;
-    overflow: hidden;
+  flex: auto;
 }
 
 .pikachu-wrapper {
-    flex: none;
-    flex-basis: 50%;
-    background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/************************************************************************************************/
-/*写在pre标签中的内容*/
-/*写代码也要好看的背景色！*/
-.code {
-    background-image: linear-gradient(25deg, #dcb9bb, #dfcac7, #e1dbd4, #e2ece0);
-    /*字体再大一些*/
-    font-size: 14px;
-    /*似乎有点挤*/
-    padding: 10px;
+.pikachu-wrapper {
+  flex: none;
+  flex-basis: 50%;
+  background-color: pink;
 }
 
-/*我需要一些更好看的字体*/
-.code {
-    font-family: "Helvetica", "Arial", sans-serif;
+.pikachu:hover .pikachu-mouth-open {
+  height: 15px;
 }
 
-/*嗯，好看，差不多可以开始画画咯~*/
+.pikachu:hover .pikachu-ear-right {
+  animation: shakeEarRight .2s linear;
+}
+
+.pikachu:hover .pikachu-ear-left {
+  animation: shakeEarLeft .2s linear;
+}
+
+.pikachu:hover .pikachu-eye-right {
+  background: none;
+  border-top: 6px solid #000;
+  top: 35px;
+  transform: scaleY(.5);
+}
+
+.pikachu:hover .pikachu-eye-right::before,
+.pikachu:hover .pikachu-eye-right::after {
+  display: none;
+}
+
+
+
+.pikachu-mouth-open {
+  position: absolute;
+  top: 65px;
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 0;
+  border-radius: 0 0 50% 50%;
+  background-color: #ea2a4d;
+}
+
+
+
+.pikachu-face,
+.pikachu-chin,
+.pikachu-torso,
+.pikachu-ear-right,
+.pikachu-ear-left,
+.pikachu-arm-right,
+.pikachu-arm-left,
+.pikachu-foot-right,
+.pikachu-foot-left,
+.pikachu-tail-part {
+  background-color: #f4ce42;
+}
+
+@keyframes idle {
+  0% {
+    transform: translateY(1px);
+  }
+
+  50% {
+    transform: translateY(-1px);
+  }
+
+  100% {
+    transform: translateY(1px);
+  }
+}
+
+@keyframes shakeEarRight {
+  0% {
+    transform: rotate(45deg) scaleY(4);
+  }
+
+  50% {
+    transform: rotate(40deg) scaleY(4);
+  }
+
+  100% {
+    transform: rotate(45deg) scaleY(4);
+  }
+}
+
+@keyframes shakeEarLeft {
+  0% {
+    transform: rotate(-45deg) scaleY(4);
+  }
+
+  50% {
+    transform: rotate(-40deg) scaleY(4);
+  }
+
+  100% {
+    transform: rotate(-45deg) scaleY(4);
+  }
+}
+
+@keyframes shakeTail {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+@keyframes pokeballRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
